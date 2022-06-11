@@ -1,6 +1,8 @@
 import { StyleSheet } from "react-native";
+import { useTheme } from "react-native-paper";
 
-const makeStyles = (themeProps: ReactNativePaper.Theme) => {
+const makeStyles = () => {
+  const theme = useTheme();
   return StyleSheet.create({
     background: {
       flex: 1,
@@ -8,7 +10,7 @@ const makeStyles = (themeProps: ReactNativePaper.Theme) => {
       justifyContent: "center",
       width: "100%",
       padding: 16,
-      backgroundColor: themeProps.colors.primary,
+      backgroundColor: theme.colors.primaryGreen,
     },
     titleContainer: { flex: 1, justifyContent: "flex-end" },
     title: { fontFamily: "Poppins", fontSize: 50, color: "#E3F2DC" },
@@ -21,7 +23,7 @@ const makeStyles = (themeProps: ReactNativePaper.Theme) => {
     welcomeTitle: {
       fontFamily: "PoppinsSemi",
       fontSize: 40,
-      color: "#FFF1CD",
+      color: theme.colors.primaryBeige,
       marginBottom: 20,
     },
     welcomeTextContainer: {
@@ -38,7 +40,7 @@ const makeStyles = (themeProps: ReactNativePaper.Theme) => {
       justifyContent: "center",
       width: "100%",
       height: 50,
-      backgroundColor: "#FFF1CD",
+      backgroundColor: theme.colors.primaryBeige,
       borderRadius: 6,
     },
     startButtonText: {
@@ -46,7 +48,7 @@ const makeStyles = (themeProps: ReactNativePaper.Theme) => {
       fontFamily: "Roboto",
       fontWeight: "bold",
       fontSize: 14,
-      color: "#335D42",
+      color: theme.colors.primaryGreen,
     },
   });
 };

@@ -5,9 +5,13 @@ import * as SplashScreen from "expo-splash-screen";
 import * as Font from "expo-font";
 import { useState, useEffect, useCallback } from "react";
 
-const WelcomeScreen = () => {
+interface WelcomeScreenProps {
+  navigation: any;
+}
+
+const WelcomeScreen = ({ navigation }: WelcomeScreenProps) => {
   const theme = useTheme();
-  const styles = makeStyles(theme);
+  const styles = makeStyles();
   const [appIsReady, setAppIsReady] = useState(false);
 
   useEffect(() => {
@@ -57,7 +61,7 @@ const WelcomeScreen = () => {
         </View>
         <Pressable
           style={styles.startButtonContainer}
-          onPress={() => console.log("next screen")}
+          onPress={() => navigation.navigate("SignUp")}
         >
           <Text style={styles.startButtonText}>Entrar</Text>
         </Pressable>
