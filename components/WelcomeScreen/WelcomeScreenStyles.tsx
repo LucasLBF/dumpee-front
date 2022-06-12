@@ -14,7 +14,15 @@ const makeStyles = () => {
     },
     titleContainer: { flex: 1, justifyContent: "flex-end" },
     title: { fontFamily: "Poppins", fontSize: 50, color: "#E3F2DC" },
-    imgContainer: { flex: 2 },
+    imgContainer: {
+      flex: 3,
+      alignItems: "center",
+      justifyContent: "center",
+      position: "relative",
+    },
+    image: {
+      marginLeft: 32,
+    },
     bottomContainer: {
       flex: 3,
       alignItems: "center",

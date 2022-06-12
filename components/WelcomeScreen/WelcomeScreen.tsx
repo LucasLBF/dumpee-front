@@ -1,4 +1,4 @@
-import { Text, View, Pressable } from "react-native";
+import { Text, View, Pressable, Image } from "react-native";
 import { useTheme } from "react-native-paper";
 import makeStyles from "./WelcomeScreenStyles";
 import * as SplashScreen from "expo-splash-screen";
@@ -50,7 +50,12 @@ const WelcomeScreen = ({ navigation }: WelcomeScreenProps) => {
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Dumpee</Text>
       </View>
-      <View style={styles.imgContainer}></View>
+      <View style={styles.imgContainer}>
+        <Image
+          style={styles.image}
+          source={require("../../assets/DumpeeImg.png")}
+        />
+      </View>
       <View style={styles.bottomContainer}>
         <Text style={styles.welcomeTitle}>Bem-Vinde!</Text>
         <View style={styles.welcomeTextContainer}>
