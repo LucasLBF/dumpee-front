@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Text, View, Image, Pressable } from "react-native";
-import { TextInput, Button, IconButton } from "react-native-paper";
+import { Text, View, Pressable } from "react-native";
+import { TextInput, Button } from "react-native-paper";
 import makeStyles from "./SignUpScreenStyles";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -54,6 +54,7 @@ const SignUpScreen = ({ navigation }: SignUpScreenProps) => {
           }
           mode="contained"
           disabled={!nameText || !pronounText}
+          onPress={() => navigation.navigate("MainApp")}
         >
           Finalizar
         </Button>
