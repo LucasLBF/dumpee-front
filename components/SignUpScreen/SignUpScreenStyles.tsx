@@ -32,14 +32,39 @@ const makeStyles = () => {
       fontFamily: "Roboto",
       marginBottom: 4,
     },
-    avatarIcon: {
-      backgroundColor: theme.colors.primaryBeige,
+    profilePicContainer: {
+      backgroundColor: theme.colors.light.surfaceVariant,
+      width: 150,
+      height: 150,
+      borderRadius: 100,
+      overflow: "hidden",
+      position: "relative",
     },
-    changeAvatarButton: {
+    avatarIcon: {
+      color: theme.colors.dark.onSurfaceVariant,
+      position: "absolute",
+      left: -15,
+      bottom: -30,
+    },
+    editAvatarButton: {
       backgroundColor: theme.colors.light.primary,
+      width: 50,
+      height: 50,
+      borderRadius: 50,
       alignItems: "center",
       justifyContent: "center",
-      marginLeft: -32,
+      marginLeft: -38,
+      shadowColor: "#000",
+      shadowOffset: {
+        width: 0,
+        height: 4,
+      },
+      shadowOpacity: 0.3,
+      shadowRadius: 3.84,
+      elevation: 6,
+    },
+    editIcon: {
+      color: theme.colors.light.onPrimary,
     },
     submitButton: {
       width: "50%",

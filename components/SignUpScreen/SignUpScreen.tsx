@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Text, View, Image, Pressable } from "react-native";
 import { TextInput, Button, IconButton } from "react-native-paper";
 import makeStyles from "./SignUpScreenStyles";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 interface SignUpScreenProps {
   navigation: any;
@@ -17,14 +18,12 @@ const SignUpScreen = ({ navigation }: SignUpScreenProps) => {
         <Text>Go Back</Text>
       </Pressable>
       <View style={styles.avatarContainer}>
-        <Image source={require("../../assets/add_profilePic.png")} />
-        <IconButton
-          icon="pencil-outline"
-          style={styles.changeAvatarButton}
-          size={16}
-          color="#FBFDF7"
-          onPress={() => console.log("change profile pic")}
-        />
+        <View style={styles.profilePicContainer}>
+          <Icon name="account" size={180} style={styles.avatarIcon} />
+        </View>
+        <Pressable style={styles.editAvatarButton}>
+          <Icon name="pencil-outline" style={styles.editIcon} size={20} />
+        </Pressable>
       </View>
       <View style={styles.formContainer}>
         <Text style={styles.inputText}>

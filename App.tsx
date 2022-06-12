@@ -12,6 +12,7 @@ declare global {
         primaryContainer: string;
         secondary: string;
         onSecondary: string;
+        onSurfaceVariant: string;
       };
       light: {
         primary: string;
@@ -22,6 +23,7 @@ declare global {
         secondary: string;
         onSecondary: string;
         onSurface: string;
+        surfaceVariant: string;
       };
       primaryBeige: string;
       primaryGreen: string;
@@ -41,6 +43,7 @@ const theme = {
       primaryContainer: "#00522B",
       secondary: "#FFB686",
       onSecondary: "#522300",
+      onSurfaceVariant: "#C1C9C0",
     },
     light: {
       primary: "#006D3C",
@@ -51,6 +54,7 @@ const theme = {
       secondary: "#964909",
       onSecondary: "#FFFFFF",
       onSurface: "#1C1C18",
+      surfaceVariant: "#DCE5DB",
     },
     primaryBeige: "#FFF1CD",
     primaryGreen: "#335D42",
