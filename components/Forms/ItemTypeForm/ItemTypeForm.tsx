@@ -1,4 +1,6 @@
-import { View, Text, TextInput, Pressable } from "react-native";
+import { useState } from "react";
+import { View, Text, Pressable } from "react-native";
+import { TextInput } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import makeStyles from "./ItemTypeFormStyles";
 
@@ -10,49 +12,65 @@ interface ItemTypeFormProps {
 
 const ItemTypeForm: React.FC<ItemTypeFormProps> = props => {
   const { closeBottomSheet, goBack, updateFormState } = props;
+  const [inputState, setInputState] = useState("");
   const styles = makeStyles();
   return (
     <View style={styles.formContainer}>
-      <View>
+      <View style={styles.formHeader}>
         <Pressable onPress={goBack}>
-          <Icon name="arrow-back" size={25} />
+          <Icon style={styles.formIcon} name="arrow-back" size={20} />
         </Pressable>
+        <Text style={styles.formTitle}>Novo Descarte</Text>
         <Pressable onPress={closeBottomSheet}>
-          <Icon name="close" size={25} />
+          <Icon style={styles.formIcon} name="close" size={20} />
         </Pressable>
-        <Text>Novo Descarte</Text>
       </View>
-      <Text>Qual tipo de equipamento você deseja reciclar?</Text>
+      <View style={styles.headerCenter}>
+        <Text style={styles.formTutorialHeaderText}>
+          Qual tipo de equipamento você deseja reciclar?
+        </Text>
+      </View>
       <View>
         <Pressable onPress={() => updateFormState({ itemType: "smartphone" })}>
-          <View>
-            <Icon name="smartphone" size={25} />
-            <Text>Smartphone ou Celular</Text>
+          <View style={styles.itemOption}>
+            <Icon style={styles.itemOptionIcon} name="smartphone" size={25} />
+            <Text style={styles.itemOptionText}>Smartphone ou Celular</Text>
           </View>
         </Pressable>
         <Pressable onPress={() => updateFormState({ itemType: "laptop" })}>
-          <View>
-            <Icon name="laptop" size={25} />
-            <Text>Notebook</Text>
+          <View style={styles.itemOption}>
+            <Icon style={styles.itemOptionIcon} name="laptop" size={25} />
+            <Text style={styles.itemOptionText}>Notebook</Text>
           </View>
         </Pressable>
         <Pressable onPress={() => updateFormState({ itemType: "tablet" })}>
-          <View>
-            <Icon name="tablet" size={25} />
-            <Text>Tablet</Text>
+          <View style={styles.itemOption}>
+            <Icon
+              style={styles.itemOptionIcon}
+              name="tablet-android"
+              size={25}
+            />
+            <Text style={styles.itemOptionText}>Tablet</Text>
           </View>
         </Pressable>
         <Pressable onPress={() => updateFormState({ itemType: "monitor" })}>
-          <View>
-            <Icon name="desktop-mac" size={25} />
-            <Text>Monitor</Text>
+          <View style={styles.itemOption}>
+            <Icon style={styles.itemOptionIcon} name="desktop-mac" size={25} />
+            <Text style={styles.itemOptionText}>Monitor</Text>
           </View>
         </Pressable>
-        <View>
-          <Icon name="devices" size={25} />
-          <Text>Outro, qual?</Text>
-        </View>
-        <TextInput placeholder="Ex: Teclado, mouse, outros acessórios"></TextInput>
+        <Pressable onPress={() => updateFormState({ itemType: inputState })}>
+          <View style={styles.itemOption}>
+            <Icon style={styles.itemOptionIcon} name="devices" size={25} />
+            <Text style={styles.itemOptionText}>Outro, qual?</Text>
+          </View>
+        </Pressable>
+        <TextInput
+          placeholder="Ex: Teclado, mouse, outros acessórios"
+          value={inputState}
+          onChangeText={text => setInputState(text)}
+          mode="outlined"
+        />
       </View>
     </View>
   );

@@ -18,7 +18,7 @@ const Tutorial: React.FC<TutorialProps> = ({ closeBottomSheet, goForward }) => {
         <Icon
           style={styles.closeIcon}
           name="close"
-          size={23}
+          size={20}
           onPress={closeBottomSheet}
         />
       </View>

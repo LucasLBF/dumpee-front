@@ -15,11 +15,6 @@ const makeStyles = () => {
       alignItems: "flex-start",
       justifyContent: "center",
       padding: 16,
-      marginBottom: 16,
-    },
-    headerCenter: {
-      alignItems: "center",
-      marginTop: 8,
     },
     formTitle: {
       fontFamily: "Poppins",
@@ -28,37 +23,40 @@ const makeStyles = () => {
       marginTop: 11,
     },
     closeIcon: {
-      position: "absolute",
-      right: 16,
-      top: 16,
       color: theme.colors.light.onSurfaceVariant,
+      position: "absolute",
+      top: 0,
+      right: 0,
     },
-    tutorialTextContainer: {
-      marginBottom: 31,
-    },
-    formTutorialHeaderText: {
-      fontFamily: "Roboto",
-      fontSize: 14,
-      color: "#464646",
-      textAlign: "center",
-    },
-    formTutorialText: {
+    textContainer: {},
+    formText: {
       fontFamily: "Roboto",
       fontSize: 14,
       color: "#464646",
       marginBottom: 8,
     },
-    continueButton: {
-      backgroundColor: theme.colors.primaryGreen,
-      borderRadius: 8,
-      width: "100%",
-      height: 44,
-      alignSelf: "center",
+    formImageContainer: {
       alignItems: "center",
-      justifyContent: "center",
-      marginTop: 16,
+      justifyContent: "flex-start",
     },
-    continueButtonText: {
+    formImage: {
+      aspectRatio: 0.6,
+      resizeMode: "contain",
+    },
+    optionsContainer: {
+      flexDirection: "row",
+      justifyContent: "center",
+      paddingHorizontal: 24,
+    },
+    optionButton: {
+      backgroundColor: theme.colors.primaryGreen,
+      borderRadius: 14,
+      paddingHorizontal: 32,
+      paddingVertical: 8,
+      justifyContent: "center",
+      marginRight: 12,
+    },
+    optionButtonText: {
       fontFamily: "Roboto",
       color: "#fff",
     },

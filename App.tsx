@@ -25,6 +25,7 @@ declare global {
         onSurface: string;
         surfaceVariant: string;
         surface2: string;
+        onSurfaceVariant: string;
       };
       primaryBeige: string;
       primaryGreen: string;
@@ -57,6 +58,7 @@ const theme = {
       onSurface: "#1C1C18",
       surfaceVariant: "#DCE5DB",
       surface2: "#FEFCF3",
+      onSurfaceVariant: "#414942",
     },
     primary: "rgba(0, 109, 60, 0.12)",
     primaryBeige: "#FFF1CD",

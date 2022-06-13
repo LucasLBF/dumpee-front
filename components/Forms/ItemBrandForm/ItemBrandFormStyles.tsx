@@ -13,13 +13,9 @@ const makeStyles = () => {
     formHeader: {
       flexDirection: "row",
       alignItems: "flex-start",
-      justifyContent: "center",
+      justifyContent: "space-between",
       padding: 16,
       marginBottom: 16,
-    },
-    headerCenter: {
-      alignItems: "center",
-      marginTop: 8,
     },
     formTitle: {
       fontFamily: "Poppins",
@@ -27,26 +23,27 @@ const makeStyles = () => {
       color: theme.colors.primaryGreen,
       marginTop: 11,
     },
-    closeIcon: {
-      position: "absolute",
-      right: 16,
-      top: 16,
+    formIcon: {
       color: theme.colors.light.onSurfaceVariant,
     },
-    tutorialTextContainer: {
-      marginBottom: 31,
+    textInputContainer: {
+      marginBottom: 58,
     },
-    formTutorialHeaderText: {
+    inputControl: {
+      marginBottom: 16,
+    },
+    inputLabelText: {
       fontFamily: "Roboto",
       fontSize: 14,
-      color: "#464646",
-      textAlign: "center",
+      color: theme.colors.light.onPrimaryContainer,
+      marginBottom: 4,
     },
-    formTutorialText: {
-      fontFamily: "Roboto",
-      fontSize: 14,
-      color: "#464646",
-      marginBottom: 8,
+    input: {
+      backgroundColor: "#fff",
+      borderRadius: 8,
+      padding: 8,
+      borderWidth: 1,
+      borderColor: "#335D42",
     },
     continueButton: {
       backgroundColor: theme.colors.primaryGreen,

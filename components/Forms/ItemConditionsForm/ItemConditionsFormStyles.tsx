@@ -13,13 +13,9 @@ const makeStyles = () => {
     formHeader: {
       flexDirection: "row",
       alignItems: "flex-start",
-      justifyContent: "center",
+      justifyContent: "space-between",
       padding: 16,
       marginBottom: 16,
-    },
-    headerCenter: {
-      alignItems: "center",
-      marginTop: 8,
     },
     formTitle: {
       fontFamily: "Poppins",
@@ -27,40 +23,25 @@ const makeStyles = () => {
       color: theme.colors.primaryGreen,
       marginTop: 11,
     },
-    closeIcon: {
-      position: "absolute",
-      right: 16,
-      top: 16,
+    formIcon: {
       color: theme.colors.light.onSurfaceVariant,
     },
-    tutorialTextContainer: {
-      marginBottom: 31,
-    },
-    formTutorialHeaderText: {
+    formText: {
       fontFamily: "Roboto",
       fontSize: 14,
       color: "#464646",
+      marginBottom: 28,
       textAlign: "center",
     },
-    formTutorialText: {
-      fontFamily: "Roboto",
-      fontSize: 14,
-      color: "#464646",
-      marginBottom: 8,
-    },
-    continueButton: {
-      backgroundColor: theme.colors.primaryGreen,
-      borderRadius: 8,
-      width: "100%",
-      height: 44,
-      alignSelf: "center",
+    formOptionsContainer: {
+      flexDirection: "row",
       alignItems: "center",
-      justifyContent: "center",
-      marginTop: 16,
+      justifyContent: "space-between",
+      paddingHorizontal: 32,
     },
-    continueButtonText: {
-      fontFamily: "Roboto",
-      color: "#fff",
+    formOption: {
+      aspectRatio: 0.9,
+      resizeMode: "contain",
     },
   });
 };

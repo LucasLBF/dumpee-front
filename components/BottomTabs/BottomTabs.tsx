@@ -7,11 +7,7 @@ import RecycleScreen from "../RecycleScreen/RecycleScreen";
 import WorkShopScreen from "../WorkshopScreen/WorkShopScreen";
 import makeStyles from "./BottomTabsStyles";
 
-interface BottomTabsProps {
-  navigation: any;
-}
-
-const BottomTabs = ({ navigation }: BottomTabsProps) => {
+const BottomTabs = () => {
   const [index, setIndex] = useState(0);
   const [routes] = useState([
     { key: "home", title: "Home", icon: "home" },
