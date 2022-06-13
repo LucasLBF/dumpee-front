@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Text, View, Pressable, FlatList, Image } from "react-native";
 import { FAB } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import makeStyles from "./RecycleScreenStyles";
+import BottomSheet from "reanimated-bottom-sheet";
+import ItemRegistrationForm from "../Forms/ItemRegistrationForm/ItemRegistrationForm";
 
 const RecycleScreen = () => {
   const [filter, setFilter] = useState("todos");
+  const sheetRef = useRef<BottomSheet>(null);
   const [items, setItems] = useState([
     {
       itemType: "smartphone",
@@ -63,6 +66,7 @@ const RecycleScreen = () => {
   const renderFinishedItems = () => (
     <Text style={{ textAlign: "center" }}>Nenhum Item encontrado</Text>
   );
+
   const styles = makeStyles();
   return (
     <View style={styles.container}>
@@ -106,7 +110,13 @@ const RecycleScreen = () => {
           ? renderInProgressItems()
           : renderFinishedItems()}
       </View>
-      <FAB style={styles.fab} small icon="plus" />
+      <FAB
+        style={styles.fab}
+        small
+        icon="plus"
+        onPress={() => sheetRef.current?.snapTo(0)}
+      />
+      <ItemRegistrationForm sheetRef={sheetRef} />
     </View>
   );
 };
